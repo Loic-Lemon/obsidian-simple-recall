@@ -1,11 +1,9 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "obsidian-simple-recall",
+	"name": "Simple Recall",
 	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"minAppVersion": "1.5.7",
+	"description": "Simple active recall and spaced repetition for your notes. Track notes in a folder and get a daily review session with 3 notes.",
+	"author": "loic",
 	"isDesktopOnly": false
 }

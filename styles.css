@@ -1,8 +1,293 @@
-/*
+.simple-recall-list {
+	margin: 1em 0;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.simple-recall-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75em;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	margin-bottom: 0.5em;
+}
 
-If your plugin does not need CSS, delete this file.
+.simple-recall-info {
+	flex: 1;
+}
 
-*/
+.simple-recall-meta {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	margin-top: 0.2em;
+}
+
+.simple-recall-overdue {
+	color: var(--text-error);
+	font-weight: bold;
+}
+
+.simple-recall-reviewed-title {
+	text-decoration: line-through;
+	color: var(--text-muted);
+}
+
+.simple-recall-reviewed-label {
+	color: var(--color-green);
+	font-weight: bold;
+}
+
+.simple-recall-status-bar {
+	cursor: pointer;
+}
+
+.simple-recall-status-bar:hover {
+	color: var(--interactive-accent);
+}
+
+.simple-recall-tags {
+	font-style: italic;
+}
+
+.simple-recall-actions {
+	display: flex;
+	gap: 0.4em;
+	align-items: center;
+}
+
+.simple-recall-go-btn {
+	padding: 0.3em 1em;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.simple-recall-go-btn:hover {
+	opacity: 0.85;
+}
+
+.simple-recall-refresh-btn {
+	padding: 0.3em 0.6em;
+	background: var(--background-modifier-hover);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1.1em;
+}
+
+.simple-recall-refresh-btn:hover {
+	background: var(--background-modifier-border);
+}
+
+.simple-recall-bottom {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+	margin-top: 1em;
+}
+
+.simple-recall-refresh-all-btn {
+	padding: 0.4em 1.2em;
+	background: var(--background-modifier-hover);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.simple-recall-refresh-all-btn:hover {
+	background: var(--background-modifier-border);
+}
+
+.simple-recall-cancel-btn {
+	padding: 0.4em 1.2em;
+	background: transparent;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	cursor: pointer;
+	color: var(--text-muted);
+}
+
+.simple-recall-cancel-btn:hover {
+	background: var(--background-modifier-hover);
+}
+
+.simple-recall-rating-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+	margin: 1.5em 0;
+}
+
+.simple-recall-rating-btn-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.3em;
+}
+
+.simple-recall-rating-btn {
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	border: 2px solid var(--interactive-accent);
+	background: transparent;
+	color: var(--text-normal);
+	font-size: 1.2em;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.simple-recall-rating-btn:hover {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	transform: scale(1.1);
+}
+
+.simple-recall-rating-label {
+	font-size: 0.75em;
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+.simple-recall-rating-label-left {
+	align-self: flex-start;
+}
+
+.simple-recall-rating-label-right {
+	align-self: flex-end;
+}
+
+.simple-recall-history-scroll {
+	overflow-y: auto;
+	height: 100%;
+	padding: 0.5em;
+}
+
+.simple-recall-history-empty {
+	padding: 2em;
+	text-align: center;
+	color: var(--text-muted);
+	white-space: pre-line;
+}
+
+.simple-recall-history-group-header {
+	font-size: 0.75em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-muted);
+	padding: 0.5em 0.4em 0.3em;
+	border-bottom: 1px solid var(--background-modifier-border);
+	margin-top: 0.5em;
+}
+
+.simple-recall-history-entry {
+	display: flex;
+	flex-direction: column;
+	padding: 0.4em 0.5em;
+	border-radius: 4px;
+	cursor: default;
+}
+
+.simple-recall-history-entry:hover {
+	background: var(--background-modifier-hover);
+}
+
+.simple-recall-history-left {
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+.simple-recall-history-stars {
+	font-size: 0.85em;
+	letter-spacing: -0.05em;
+	color: var(--text-muted);
+	flex-shrink: 0;
+	width: 4.5em;
+}
+
+.simple-recall-rating-low {
+	color: var(--text-error);
+}
+
+.simple-recall-rating-high {
+	color: var(--color-green);
+}
+
+.simple-recall-history-title {
+	cursor: pointer;
+	color: var(--text-normal);
+	font-size: 0.9em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.simple-recall-history-title:hover {
+	color: var(--interactive-accent);
+}
+
+.simple-recall-history-meta {
+	font-size: 0.75em;
+	color: var(--text-faint);
+	margin-top: 0.15em;
+	margin-left: 0.3em;
+}
+
+.simple-recall-folder-list {
+	margin: 0.5em 0;
+}
+
+.simple-recall-folder-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.4em 0.6em;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	margin-bottom: 0.3em;
+}
+
+.simple-recall-remove-folder-btn {
+	padding: 0.15em 0.6em;
+	background: transparent;
+	border: 1px solid var(--text-error);
+	color: var(--text-error);
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.85em;
+}
+
+.simple-recall-remove-folder-btn:hover {
+	background: var(--text-error);
+	color: var(--text-on-accent);
+}
+
+.simple-recall-add-folder {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+.simple-recall-folder-input {
+	flex: 1;
+}
+
+.simple-recall-add-folder-btn {
+	padding: 0.3em 0.8em;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.simple-recall-add-folder-btn:hover {
+	opacity: 0.85;
+}
